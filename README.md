@@ -1,3 +1,5 @@
-# vite-map-app
+# vernonia-addresses
 
-City of Vernonia web map app template.
+Vernonia centric address web map application.
+
+http://vernonia-addresses.netlify.app/

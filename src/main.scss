@@ -41,6 +41,11 @@ body {
   font-size: 16px;
 }
 
+// until z-index is fixed
+.cov-loader {
+  z-index: 1000 !important;
+}
+
 //////////////////////////////////////
 // calcite and arcgis js api variables
 //////////////////////////////////////
