@@ -1,6 +1,20 @@
 // https://vitejs.dev/config/
 
+import { ViteEjsPlugin } from 'vite-plugin-ejs';
+
+import _package from './package.json';
+
+const calciteUrl = `https://js.arcgis.com/calcite-components/${_package.dependencies['@esri/calcite-components']
+  .replace('^', '')
+  .replace('~', '')}/calcite.esm.js`;
+
 export default {
+  plugins: [
+    ViteEjsPlugin({
+      calciteUrl,
+    }),
+  ],
+
   // where's the source
   root: './src',
 
