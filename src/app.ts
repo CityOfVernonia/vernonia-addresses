@@ -19,6 +19,7 @@ import MapApplication from '@vernonia/map-application/dist/MapApplication';
 
 // widgets
 import Address from './widgets/Address';
+import Legend from '@arcgis/core/widgets/Legend';
 import Export from './widgets/Export';
 import PrintSnapshot from '@vernonia/core/dist/widgets/PrintSnapshot';
 
@@ -47,7 +48,6 @@ const load = async () => {
     portalItem: {
       id: '0df1d0d9f7aa45099881c6de540950c8',
     },
-    visible: false,
   });
 
   const cityLimits = new FeatureLayer({
@@ -128,6 +128,13 @@ const load = async () => {
         icon: 'information',
         type: 'calcite-panel',
         open: true,
+      },
+      {
+        widget: new Legend({ view }),
+        text: 'Legend',
+        icon: 'legend',
+        type: 'div',
+        groupEnd: true,
       },
       {
         widget: new Export({ layer: addresses }),
