@@ -4,7 +4,6 @@ import './main.scss';
 
 // esri config and auth
 import esriConfig from '@arcgis/core/config';
-import { Extent } from '@arcgis/core/geometry';
 
 // map, view and layers
 import Map from '@arcgis/core/Map';
