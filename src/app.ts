@@ -4,6 +4,7 @@ import './main.scss';
 
 // esri config and auth
 import esriConfig from '@arcgis/core/config';
+import { Extent } from '@arcgis/core/geometry';
 
 // map, view and layers
 import Map from '@arcgis/core/Map';
@@ -80,6 +81,8 @@ const load = async () => {
     extent: cityLimits.fullExtent,
     constraints: {
       rotationEnabled: false,
+      geometry: cityLimits.fullExtent.clone().expand(3),
+      minScale: 40000,
     },
     popup: {
       dockEnabled: true,
@@ -162,6 +165,8 @@ const load = async () => {
   });
 
   // view.when(() => { });
+
+  console.log(view);
 };
 
 load();
